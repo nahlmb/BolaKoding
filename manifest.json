@@ -2,7 +2,7 @@
     "name": "BolaKoding",
     "short_name": "BolaKoding",
     "description": "Football matches and schedules",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#001253",
     "theme_color": "#ffffff",
