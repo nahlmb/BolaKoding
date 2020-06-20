@@ -6,8 +6,8 @@ const register = () => {
                 .then(function () {
                     console.log("ServiceWorker registered!");
                 })
-                .catch(function () {
-                    console.log("Fail to register ServiceWorker");
+                .catch(function (e) {
+                    console.log(e.message);
                 });
         });
         reqNotifPremission()
