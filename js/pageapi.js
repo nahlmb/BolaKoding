@@ -190,7 +190,7 @@ const getFavoritedClubs = async () => {
         const clubs = await getAllFavClub()
         clubs.forEach(club => {
             const html = `
-            <a class="favorite-card" href="/club.html?id=${club.id}">
+            <a class="favorite-card" href="./club.html?id=${club.id}">
             <div class="card horizontal">
                 <div class="card-image">
                     <img src="${club.crestUrl}">
