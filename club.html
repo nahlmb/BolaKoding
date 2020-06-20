@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BolaKoding</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="manifest" href="/manifest.json" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="./index.html" class="brand-logo" id="logo-container"><img class="head-logo" src="img/logo.png"
+                    alt="BolaKoding"></a>
+            <a href="./index.html" class="sidenav-trigger">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+
+    <div class="container" id="body-content">
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue" id="save">
+            <i class="large material-icons">favorite</i>
+        </a>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red" id="delete" style="display: none;">
+            <i class="large material-icons">delete</i>
+        </a>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/idb.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/pageapi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get("id"))
+            const btnSave = document.getElementById("save")
+            const btnDelete = document.getElementById("delete")
+            const savedClub = await getFavClubById(id)
+
+            if (savedClub) {
+                showDetailClub(savedClub)
+                btnDelete.style.display = 'block';
+                btnSave.style.display = 'none';
+                btnDelete.onclick = () => {
+                    deleteFavClub(id)
+                }
+            } else {
+                const club = await fetchDetailClub(id);
+                showDetailClub(club)
+                btnDelete.style.display = 'none';
+                btnSave.style.display = 'block';
+                btnSave.onclick = () => {
+                    saveClubToFav(club)
+                };
+            }
+        });
+    </script>
+    </body>
+
+</html>

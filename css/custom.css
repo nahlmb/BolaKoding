@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');body {
+    background-color: #001253;
+    color: #001253;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pad-top {
+    margin-top: 18px;
+}
+
+.topnav a {
+    font-family: 'Montserrat', sans-serif;
+    color: #001253;
+}
+
+.sidenav a {
+    font-family: 'Montserrat', sans-serif;
+    color: #001253;
+}
+
+.error-message {
+    color: white;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.league-bar {
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    text-align: center;
+    margin: 14px 64px 14px 64px;
+    padding: 8px 0px 8px 0px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+.card-image img{
+    height: 94px;
+    padding: 12px;
+    width: auto;
+}
+
+.collection {
+    border-radius: 14px;
+}
+
+.collection .title {
+    font-weight: 700;
+    color: #001253;
+    margin: 0;
+}
+
+.collection .sub-title {
+    color: #001253;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.bk-blue {
+    color: #001253;
+}
+
+.head-logo {
+    height: 30px;
+    width: auto;
+    padding-top: 6px;
+}
+
+.sidenav-trigger {
+    color: #001253;
+}
+
+.club-detail {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 124px;
+}
+
+.club-detail img {
+    width: 150px;
+    height: auto;
+}
+
+.favorite-card {
+    color: #001253;
+}
+
+.favorite-card .card:hover {
+    background-color: #EAEAEA;
+}
+
+strong {
+    font-weight: 700;
+}
