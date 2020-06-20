@@ -7,17 +7,17 @@ else {
 }
 
 workbox.precaching.precacheAndRoute([
-    { url: './', revision: '1' },
-    { url: './manifest.json', revision: '1' },
-    { url: './nav.html', revision: '1' },
-    { url: './index.html', revision: '1' },
-    { url: './club.html', revision: '1' },
-    { url: './js/db.js', revision: '1' },
-    { url: './js/idb.js', revision: '1' },
-    { url: './js/pageapi.js', revision: '1' },
-    { url: './js/register.js', revision: '1' },
-    { url: './js/nav.js', revision: '1' },
-    { url: './js/materialize.min.js', revision: '1' },
+    { url: '', revision: '1' },
+    { url: 'manifest.json', revision: '1' },
+    { url: 'nav.html', revision: '1' },
+    { url: 'index.html', revision: '1' },
+    { url: 'club.html', revision: '1' },
+    { url: 'js/db.js', revision: '1' },
+    { url: 'js/idb.js', revision: '1' },
+    { url: 'js/pageapi.js', revision: '1' },
+    { url: 'js/register.js', revision: '1' },
+    { url: 'js/nav.js', revision: '1' },
+    { url: 'js/materialize.min.js', revision: '1' },
 ], {
     ignoreUrlParametersMatching: [/.*/]
 });
