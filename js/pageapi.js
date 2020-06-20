@@ -8,7 +8,7 @@ const clearPage = () => {
 
 const openKlasmen = async () => {
     try {
-        const get = await fetch('../pages/klasmen.html')
+        const get = await fetch('pages/klasmen.html')
         const html = await get.text()
         body = document.getElementById('body-content')
         body.innerHTML = html
@@ -20,7 +20,7 @@ const openKlasmen = async () => {
 
 const openJadwal = async () => {
     try {
-        const get = await fetch('../pages/jadwal.html')
+        const get = await fetch('./pages/jadwal.html')
         const html = await get.text()
         body = document.getElementById('body-content')
         body.innerHTML = html
@@ -32,7 +32,7 @@ const openJadwal = async () => {
 
 const openFavorite = async () => {
     try {
-        const get = await fetch('../pages/favorit.html')
+        const get = await fetch('./pages/favorit.html')
         const html = await get.text()
         body = document.getElementById('body-content')
         body.innerHTML = html
